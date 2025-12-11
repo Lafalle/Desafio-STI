@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Desafio 3</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+
+</head>
+
+<body>
+
+    <h1>Relatório de CR Acadêmico</h1>
+
+    <div class="container">
+        
+        <div>
+
+            <h2>CR dos Alunos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Matrícula</th>
+                        <th>CR</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr th:each="aluno : ${alunos}">
+
+                        <td th:text="${aluno.matricula}">100</td>
+                        <td th:text="${#numbers.formatInteger(aluno.cr, 1)}">80</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <div>
+
+            <h2>Média dos Cursos</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Curso</th>
+                        <th>Média</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr th:each="curso : ${cursos}">
+
+                        <td th:text="${curso.codCurso}">10</td>
+                        <td th:text="${#numbers.formatInteger(curso.media, 1)}">70</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
