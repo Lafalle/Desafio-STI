@@ -1,4 +1,6 @@
 # Desafio-STI
 Resolução para o desafio 3 do processo seletivo para o STI
 
-As reoluções consistem em uma implementação do Java para resolver o desafio e uma implementação do que foi produzido no Java para o framework Spring Boot.
+- As resoluções consistem em:
+  * Uma implementação em Java para resolver o desafio;
+  * Uma implementação do que foi produzido em Java para o framework Spring Boot.
